@@ -1,0 +1,1 @@
+MERN Stack application built for displaying guitars as an online store
