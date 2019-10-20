@@ -1,0 +1,55 @@
+import React, { Fragment } from "react";
+import ErrorBoundary from "./ErrorBoundary";
+import Img from "./Img";
+import HomeHeader from "./Img/HomeHeader.png";
+import CategoryHeader from "./CategoryHeader";
+import SortHeader from "./SortHeader";
+
+import Dress from "./Dress"; 
+//import request from "request";
+
+class FrontPage extends React.Component {
+
+   componentDidMount() {
+      
+  }
+
+  render() {
+    const {dresses, allCategory ,dressCategory, partyCategory} = this.props;
+
+    return (
+      <Fragment>
+          <div className="frontPage">
+            <div className="homeCover">
+               <Img url={HomeHeader} />
+            </div>
+            <div className="tagLine">
+                LAVISTH STYLE FOR THE LUXURY DOG
+            </div>
+            <div className="categories">
+              <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>
+              <CategoryHeader category={dressCategory} name="DRESSES"></CategoryHeader>
+              <CategoryHeader category={partyCategory} name="PARTY"></CategoryHeader>
+            </div>
+            <div className="firstRow"> 
+              {/*<SortHeader></SortHeader> */}
+              {dresses.map((item, i) => (
+                  <Dress key={i} item={item} />
+              ))}  
+            </div>
+            <div className="press">
+              Press
+            </div>
+          </div>
+      </Fragment>
+    );
+  }
+}
+
+export default function DetailsErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <FrontPage {...props} />
+    </ErrorBoundary>
+  );
+}

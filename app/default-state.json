@@ -1,0 +1,40 @@
+{
+  "dresses": [
+  {
+    "name": "Princess Front",
+    "url": "/PrincessFront.57f50057.jpg",
+    "price": 125.00,
+    "category": "dresses"
+  },
+  {
+    "name": "By Sea",
+    "url": "/BySea.23a45ebc.jpg",
+    "price": 40.00,
+    "category": "dresses"
+  },
+  {
+    "name": "Dark Blue Gingham",
+    "url": "/DarkBlueGingham.ade4c1dd.jpg",
+    "price": 25.00,
+    "category": "dresses"
+  },
+  {
+    "name": "Pink Gingham",
+    "url": "/PinkGingham.cd8b3289.jpg",
+    "price": 35.00,
+    "category": "party"
+  },
+  {
+    "name": "Pretty In Paris",
+    "url": "/PrettyInParis.3e6c54db.png",
+    "price": 45.00,
+    "category": "party"
+  },
+  {
+    "name": "Rhapsody Front",
+    "url": "/RhapsodyFront.eaa00b5e.jpg",
+    "price": 35.00,
+    "category": "party"
+  }
+]
+}
