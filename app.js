@@ -1,3 +1,4 @@
+var cors = require('cors');
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
@@ -6,6 +7,9 @@ var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 
 var app = express();
+app.use(cors())
+
+// Controllers
 var guitarsController = require('./server/controllers/guitars-controller');
 //mongoose.connect(config.database);
 
