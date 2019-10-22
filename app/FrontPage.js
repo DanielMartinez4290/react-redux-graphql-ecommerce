@@ -11,7 +11,8 @@ import Dress from "./Dress";
 class FrontPage extends React.Component {
 
    componentDidMount() {
-      
+    const {partyCategory} = this.props;
+    partyCategory;
   }
 
   render() {
@@ -21,10 +22,10 @@ class FrontPage extends React.Component {
       <Fragment>
           <div className="frontPage">
             <div className="homeCover">
-               <Img url={HomeHeader} />
+               { /* <Img url={HomeHeader} /> */ }
             </div>
             <div className="tagLine">
-                LAVISTH STYLE FOR THE LUXURY DOG
+                Guitar Store
             </div>
             <div className="categories">
               <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>

@@ -1,27 +1,15 @@
 import App from '../App';
 import { connect } from "react-redux"
-
-const ALL     = 'ALL'; 
-const DRESSES = 'DRESSES'; 
-const PARTY   = 'PARTY'; 
-
-const allCategory = () => ({
-  type: ALL
-});
-
-const dressCategory = () => ({
-  type: DRESSES
-});
-
-const partyCategory = () => ({
-  type: PARTY
-});
+import { allCategory, dressCategory, partyCategory } from '../actions/guitarActions';
+import defaultState from '../default-state';
 
 const mapStateToProps = state => {
+  console.log(state);
+    //return {dresses: defaultState.dresses,count:3};
     return state;
 };
    
-const mapDispatchToProps = {
+const actionCreators = {
        allCategory,
        dressCategory,
        partyCategory
@@ -29,5 +17,5 @@ const mapDispatchToProps = {
    
 export default connect(
      mapStateToProps,
-     mapDispatchToProps
+     actionCreators
 )(App);
