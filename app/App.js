@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   render() {
-    const {count, dresses, lists, dressCategory, partyCategory, allCategory} = this.props;
+    const {count, dresses, dressCategory, partyCategory, allCategory, dispatch} = this.props;
 
     return(
       <ThemeContext.Provider>

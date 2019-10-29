@@ -1,15 +1,11 @@
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema;
+var mongoose = require('mongoose'); 
+var Schema = mongoose.Schema;
 
-var guitarSchema = Schema({
-  email: String,
-  username: String,
-  password: String,
+var guitarSchema = new Schema({
+  name: String,
   image: String,
-  bio: String,
-  following: [{userId: String}],
-  followers: [{userId: String}],
-  wastes : [{ type: Schema.Types.ObjectId, ref: 'Waste' }]
+  price: String, 
+  category: String
 });
 
 module.exports = mongoose.model('Guitar', guitarSchema);

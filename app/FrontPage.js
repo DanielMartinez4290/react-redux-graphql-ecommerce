@@ -6,7 +6,6 @@ import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
 
 import Dress from "./Dress"; 
-//import request from "request";
 
 class FrontPage extends React.Component {
 
@@ -34,7 +33,7 @@ class FrontPage extends React.Component {
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}
-              {dresses.map((item, i) => (
+              { dresses.map((item, i) => (
                   <Dress key={i} item={item} />
               ))}  
             </div>

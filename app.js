@@ -2,16 +2,17 @@ var cors = require('cors');
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var config = require('./server/config');
 
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 
 var app = express();
-app.use(cors())
+app.use(cors());
 
 // Controllers
 var guitarsController = require('./server/controllers/guitars-controller');
-//mongoose.connect(config.database);
+mongoose.connect(config.database);
 
 mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB. Did you forget to run `mongod`?'.red);
@@ -32,5 +33,5 @@ app.get('/', function(req, res){
 app.get('/api/guitars/getGuitarInfo/:id', guitarsController.getGuitarInfo);
 app.get('/api/guitars/getGuitars', guitarsController.getGuitars);
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
 console.log("Listening on Port 3000");

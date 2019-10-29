@@ -16,5 +16,26 @@ module.exports.getGuitarInfo = function(req, res){
 }
 
 module.exports.getGuitars = function(req, res){
-	res.json(guitarData);
+	let guitars = Guitars.find( { _id: "5db5f5f8676cabddf4cd7f65" } );
+
+	console.log(guiras);
+
+	/*
+	Guitars.findById("5db5f5f8676cabddf4cd7f65", function(err, userInfo){
+		console.log(userInfo);
+	});
+	*/
+	//myCursor = Guitars.find({});
+	//console.log(myCursor);
+	//res.json(myCursor);
+	//res.json(guitarData);
+/*
+	Guitars.insertOne(
+		{ "name" : "canvas",
+		  "image" : "100",
+		  "price" : "cotton",
+		  "category" : "adsfda"
+		}
+	 )
+	 */
 }
