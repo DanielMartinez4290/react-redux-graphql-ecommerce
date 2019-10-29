@@ -11,7 +11,7 @@
     "express": "^4.13.3",
     "fs-extra": "*",
     "lib": "^4.0.2",
-    "mongoose": "^4.1.10",
+    "mongoose": "^5.7.5",
     "ng-file-upload": "*",
     "normalizr": "^3.4.1",
     "react": "^16.8.4",
