@@ -9,7 +9,6 @@ class Dress extends React.Component {
   }
 
   render() {
-
     return (
         <div className="dress">
           <Link to={"/products/" + this.props.item.slug}>
