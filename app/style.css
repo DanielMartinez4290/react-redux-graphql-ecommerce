@@ -1,3 +1,18 @@
+/* Global Styles */
+body {
+    padding:0 2em 0 2em;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/* Specific Styles */
+.productName {
+    margin:5px 0 3px 0;
+}
+
 .wrapper {
     display: inline-flex;
     flex-flow: row wrap;
@@ -68,7 +83,7 @@
 .dress{
     /*display:flex;
      flex:1; */
-    padding:2%;
+    padding:2% 2% 1% 2%;
     margin-top:2%;
     margin-left:4%;
     margin-bottom:2%;
@@ -101,9 +116,4 @@
     .aside-2 { order: 3; }
     .footer  { order: 4; }
     */
-}
-
-body {
-    padding:0 2em 0 2em;
-    margin:0;
 }

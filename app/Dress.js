@@ -1,6 +1,7 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import Img from "./Img";
+import { Link } from "@reach/router";
 
 class Dress extends React.Component {
   componentDidMount() {
@@ -10,13 +11,13 @@ class Dress extends React.Component {
   render() {
 
     return (
-      <div className="dress">
-        <Img url={this.props.item.url} />
-        <div>{this.props.item.name}</div>
-        <div>
-          Price: ${this.props.item.price}
+        <div className="dress">
+          <Link to={"/products/" + this.props.item.slug}>
+          <Img url={this.props.item.url} />
+          <div className="productName">{this.props.item.name}</div>
+          <div className="productPrice">Price: ${this.props.item.price}</div>
+          </Link>
         </div>
-      </div>
     );
   }
 }

@@ -16,9 +16,9 @@ module.exports.getGuitarInfo = function(req, res){
 }
 
 module.exports.getGuitars = function(req, res){
-	let guitars = Guitars.find( { _id: "5db5f5f8676cabddf4cd7f65" } );
+	//let guitars = Guitars.find( { _id: "5db5f5f8676cabddf4cd7f65" } );
 
-	console.log(guiras);
+	//console.log(guiras);
 
 	/*
 	Guitars.findById("5db5f5f8676cabddf4cd7f65", function(err, userInfo){
@@ -28,7 +28,7 @@ module.exports.getGuitars = function(req, res){
 	//myCursor = Guitars.find({});
 	//console.log(myCursor);
 	//res.json(myCursor);
-	//res.json(guitarData);
+	res.json(guitarData);
 /*
 	Guitars.insertOne(
 		{ "name" : "canvas",

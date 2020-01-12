@@ -1,20 +1,18 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import { Link } from "@reach/router";
 
-class NavItem extends React.Component {
+class ProductPage extends React.Component {
   //state = { loading: true, showModal: false };
+
   componentDidMount() {
 
   }
-  
   render() {
-    const { title, url, children } = this.props.item;
 
     return (
-      <li className="navItem">
-          <Link to={url}>{title}</Link>
-      </li>
+      <div className="page">
+        product page content
+      </div>
     );
   }
 }
@@ -22,7 +20,7 @@ class NavItem extends React.Component {
 export default function DetailsErrorBoundary(props) {
   return (
     <ErrorBoundary>
-      <NavItem {...props} />
+      <ProductPage {...props} />
     </ErrorBoundary>
   );
 }

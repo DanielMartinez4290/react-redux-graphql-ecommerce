@@ -5,6 +5,7 @@ import Page from "./Page";
 import FrontPage from "./FrontPage";
 import styled, { css } from "styled-components";
 import ThemeContext from "./ThemeContext";
+import ProductPage from "./ProductPage";
 
 const styles = css`
     position: relative;
@@ -51,6 +52,7 @@ class App extends Component {
                   partyCategory = {partyCategory}
                 />
                 <Page path="/:id"/>
+                <ProductPage path="products/:id" />
               </Router>
             </Container>
           </article>

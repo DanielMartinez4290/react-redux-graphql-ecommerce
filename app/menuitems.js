@@ -4,19 +4,19 @@ export default [
     title: "Home"
   },
   {
-    url: "/blog",
+    url: "blog",
     title: "Blog"
   },
   {
-    url: "/press",
+    url: "press",
     title: "Press",
   },
   {
-    url: "/sizing",
+    url: "sizing",
     title: "Sizing",
   },
   {
-    url: "/contact",
+    url: "contact",
     title: "Contact",
   },
 ];

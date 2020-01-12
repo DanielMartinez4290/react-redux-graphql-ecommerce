@@ -4,7 +4,6 @@ import Img from "./Img";
 import HomeHeader from "./Img/HomeHeader.png";
 import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
-
 import Dress from "./Dress"; 
 
 class FrontPage extends React.Component {

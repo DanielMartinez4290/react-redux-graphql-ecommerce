@@ -2,8 +2,6 @@ import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import menuItems from "./menuitems";
 import NavItem from "./NavItem";
-import { Link } from "@reach/router"; 
-
 
 class PageHeader extends React.Component {
   //state = { loading: true, showModal: false };
