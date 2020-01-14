@@ -6,9 +6,22 @@ import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
 import Dress from "./Dress"; 
 
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { ListProducts } from './graphql';
+
 class FrontPage extends React.Component {
 
    componentDidMount() {
+    
+    API.graphql(graphqlOperation(ListProducts))
+       .then(response => {
+          console.log(response);
+          const products = response.data.ListProducts;
+          this.setState( products );
+       })
+       .catch(console.error);
+       
+
     const {partyCategory} = this.props;
     partyCategory;
   }

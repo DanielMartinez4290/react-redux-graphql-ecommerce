@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore } from 'redux';
-import dressesReducer from "./reducers/dresses-reducer";
+import myAppConfig from './amplifyconfig';
+
 import rootReducer from './reducers';
 import AppContainer from './containers/AppContainer';
+
+import Amplify from 'aws-amplify';
+import configuration from './aws-exports';
+
+Amplify.configure({...configuration, ...myAppConfig});
+
+import dressesReducer from "./reducers/dresses-reducer";
 
 const store = createStore(
  dressesReducer,
