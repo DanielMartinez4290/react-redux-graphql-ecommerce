@@ -7,20 +7,24 @@ import SortHeader from "./SortHeader";
 import Dress from "./Dress"; 
 
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
-import { ListProducts } from './graphql';
+import { ListGuitars, ListProducts } from './graphql';
 
 class FrontPage extends React.Component {
 
-   componentDidMount() {
-    
-    API.graphql(graphqlOperation(ListProducts))
+  constructor(props) {
+    super(props);
+    this.state = {products:[]}
+  }
+
+  componentDidMount() {
+    API.graphql(graphqlOperation(ListGuitars))
        .then(response => {
-          console.log(response);
-          const products = response.data.ListProducts;
-          this.setState( products );
+        //console.log(response);
+          console.log(response.data.listGuitars.items);
+          const products = response.data.listGuitars.items;
+          this.setState({products: products});
        })
        .catch(console.error);
-       
 
     const {partyCategory} = this.props;
     partyCategory;
@@ -45,7 +49,7 @@ class FrontPage extends React.Component {
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}
-              { dresses.map((item, i) => (
+              { this.state.products.map((item, i) => (
                   <Dress key={i} item={item} />
               ))}  
             </div>

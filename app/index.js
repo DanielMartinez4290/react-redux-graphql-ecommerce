@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore } from 'redux';
 import myAppConfig from './amplifyconfig';
-
 import rootReducer from './reducers';
 import AppContainer from './containers/AppContainer';
-
 import Amplify from 'aws-amplify';
 import configuration from './aws-exports';
 

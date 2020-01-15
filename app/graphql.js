@@ -4,7 +4,23 @@ export const ListProducts = `
       items {
         id,
         name,
-        slug
+        slug,
+        url
+      }
+    }
+  }
+`;
+
+export const ListGuitars = `
+  query ListGuitars {
+    listGuitars{
+      items {
+        id,
+        name,
+        slug,
+        url,
+        price,
+        category
       }
     }
   }

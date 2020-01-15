@@ -90,6 +90,10 @@ a {
     margin-bottom:2%;
     max-height:220px;
     width:24%;
+    overflow:hidden;
+}
+
+.dress:hover {
     border:1px solid black;
 }
 
