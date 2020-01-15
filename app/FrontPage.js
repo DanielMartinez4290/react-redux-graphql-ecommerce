@@ -44,8 +44,8 @@ class FrontPage extends React.Component {
             </div>
             <div className="categories">
               <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>
-              <CategoryHeader category={dressCategory} name="DRESSES"></CategoryHeader>
-              <CategoryHeader category={partyCategory} name="PARTY"></CategoryHeader>
+              <CategoryHeader category={dressCategory} name="GIBSON"></CategoryHeader>
+              <CategoryHeader category={partyCategory} name="FENDER"></CategoryHeader>
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}
@@ -53,9 +53,9 @@ class FrontPage extends React.Component {
                   <Dress key={i} item={item} />
               ))}  
             </div>
-            <div className="press">
+            {/*<div className="press">
               Press
-            </div>
+              </div> */}
           </div>
       </Fragment>
     );

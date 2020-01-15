@@ -104,9 +104,8 @@ a {
 }
 
 .footer {
-    margin-top:20px;
-    margin-bottom:20px;
-    border:1px solid black;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 @media all and (min-width: 600px) {

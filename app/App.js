@@ -57,7 +57,9 @@ class App extends Component {
               </Router>
             </Container>
           </article>
-          <footer className="footer">Footer</footer>
+          <footer className="footer">
+            <PageHeader/>
+          </footer>
         </div>
       </ThemeContext.Provider>
     );
