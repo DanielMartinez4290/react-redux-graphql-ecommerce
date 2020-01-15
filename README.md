@@ -1,1 +1,2 @@
-MERN Stack application built for displaying guitars as an online store
+React / Redux application for displaying guitars as an online store. 
+Reads in from Back End GraphQL API
