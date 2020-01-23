@@ -5,10 +5,12 @@ const axios = require('axios');
 let guitarState = [];
 
 // Make request to get guitars
+/*
 axios.get('http://127.0.0.1:3001/api/guitars/getGuitars')
   .then(function (response) {
     guitarState = response.data.dresses;
   });
+  */
 
   const initialState = {
     count:0,

@@ -6,7 +6,7 @@ import FrontPage from "./FrontPage";
 import styled, { css } from "styled-components";
 import ThemeContext from "./ThemeContext";
 import ProductPage from "./ProductPage";
-import { withAuthenticator } from 'aws-amplify-react';
+//import { withAuthenticator } from 'aws-amplify-react';
 
 const styles = css`
     position: relative;

@@ -1,16 +1,3 @@
-export const ListProducts = `
-  query ListProducts {
-    listProducts{
-      items {
-        id,
-        name,
-        slug,
-        url
-      }
-    }
-  }
-`;
-
 export const ListGuitars = `
   query ListGuitars {
     listGuitars{
@@ -27,17 +14,28 @@ export const ListGuitars = `
 `;
 
 export const CreateProduct = `
-mutation CreateProduct {
-  createProduct(input: {
-    name:"espadfas",
-    slug:"esp-les-paul"
-  }) {
-    id,
-    name,
-    slug
-  }
+mutation CreateProduct(
+    $name: String!
+    $slug: String!
+    $url: String!
+    $price: Float!
+    $category: String!
+) {
+  createGuitar(input:{
+  name: $name,
+  slug: $slug,
+  url: $url,
+  price: $price,
+  category: $category
+}) {
+  id
+  name
+  slug
+  url
+  price
+  category
 }
-`;
+}`;
 
 export const GetProduct = `
 query GetProduct {

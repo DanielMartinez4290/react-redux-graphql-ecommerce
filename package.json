@@ -1,6 +1,15 @@
 {
   "name": "GuitarStoreMern",
   "version": "0.0.1",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "dependencies": {
     "@aws-amplify/api": "^2.1.3",
     "@aws-amplify/pubsub": "^2.1.3",
