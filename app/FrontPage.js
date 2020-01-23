@@ -7,7 +7,7 @@ import Dress from "./Dress";
 import NewProduct from "./NewProduct";
 
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
-import { ListGuitars, CreateProduct } from './graphql';
+import { CreateProduct } from './graphql';
 
 class FrontPage extends React.Component {
 
@@ -17,19 +17,12 @@ class FrontPage extends React.Component {
   }
 
   componentDidMount() {
-    API.graphql(graphqlOperation(ListGuitars))
-       .then(response => {
-          const products = response.data.listGuitars.items;
-          this.setState({products});
-       })
-       .catch(console.error);
-
-    const {partyCategory} = this.props;
-    partyCategory;
+    const {allCategory} = this.props;
+    allCategory;    
   }
 
   addProduct = product => {
-    API.graphql(graphqlOperation(CreateProduct, product)).then(response =>{
+    API.graphql(graphqlOperation(CreateProduct, product)).then(response => {
       const newProduct = response.data.createGuitar;
     });
     
@@ -58,7 +51,7 @@ class FrontPage extends React.Component {
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}
-              { this.state.products.map((item, i) => (
+              { dresses.map((item, i) => (
                   <Dress key={i} item={item} />
               ))}  
             </div>

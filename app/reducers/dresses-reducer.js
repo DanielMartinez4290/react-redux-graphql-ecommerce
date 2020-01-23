@@ -1,24 +1,23 @@
 import {ALL, DRESSES, PARTY} from '../actions/guitarActions';
+import configuration from '../aws-exports';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { ListGuitars } from '../graphql';
 
-const axios = require('axios');
-
+Amplify.configure({...configuration});
 let guitarState = [];
 
 // Make request to get guitars
-/*
-axios.get('http://127.0.0.1:3001/api/guitars/getGuitars')
-  .then(function (response) {
-    guitarState = response.data.dresses;
-  });
-  */
+API.graphql(graphqlOperation(ListGuitars))
+   .then(response => {
+     guitarState = response.data.listGuitars.items;
+   })
+   .catch(console.error);
 
   const initialState = {
-    count:0,
-    dresses: []
+    dresses: guitarState
   };
   
   const dressesReducer = (state = initialState, action) => {
-    
     let dressesArray = [];
   
     if (action.type === ALL){
@@ -29,7 +28,7 @@ axios.get('http://127.0.0.1:3001/api/guitars/getGuitars')
   
     if (action.type === DRESSES){
       guitarState.forEach(function (dress) {
-        if (dress.category === 'dresses') {
+        if (dress.category === 'Gibson') {
           dressesArray.push(dress); 
         }
       })
@@ -41,7 +40,7 @@ axios.get('http://127.0.0.1:3001/api/guitars/getGuitars')
   
     if (action.type === PARTY){
       guitarState.forEach(function (dress) {
-        if (dress.category === 'party') {
+        if (dress.category === 'Fender') {
           dressesArray.push(dress); 
         }
       })

@@ -42,7 +42,9 @@ a {
     display:flex;    
     flex-wrap:wrap;
     width:80%;
+    min-width: 820px;
     height:620px;
+    /*margin:0 40px 30px 40px;*/
     margin:auto;
     margin-bottom:30px;
     border:1px solid black;
@@ -100,6 +102,11 @@ a {
     max-height:220px;
     width:24%;
     overflow:hidden;
+}
+
+.dress .img {
+    width:160px;
+    margin:auto;
 }
 
 .dress:hover {
