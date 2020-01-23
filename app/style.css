@@ -44,7 +44,16 @@ a {
     width:80%;
     height:620px;
     margin:auto;
+    margin-bottom:30px;
     border:1px solid black;
+    overflow:scroll;
+}
+.newProduct input {
+    margin: 2px 2px 5px 2px;
+}
+
+.newProduct input[name="url"] {
+    width:400px;
 }
 
 .aside {

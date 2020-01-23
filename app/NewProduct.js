@@ -6,6 +6,9 @@ class NewProduct extends Component {
   state = {
     name: '',
     slug: '',
+    url: '',
+    price: '',
+    category: ''
   };
 
   handleChange = event => {
@@ -16,27 +19,27 @@ class NewProduct extends Component {
 
   handleSubmit = event => {
     const { onSubmit } = this.props;
-    const { name, slug } = this.state;
+    const { name, slug, price, category, url } = this.state;
 
     event.preventDefault();
 
     onSubmit({
-      url: slug,
+      url,
       slug,
       id: Date.now().toString(),
       name,
-      price: 1899.00,
-      category: "Gibson"
+      price,
+      category
     });
 
-    this.setState({ name: '', slug: '' });
+    this.setState({ name: '', slug: '' , price: 0, category: '', url: ''});
   };
 
   render() {
-    const { name, slug } = this.state;
+    const { name, slug, price, category, url } = this.state;
 
     return (
-      <form className="NewProduct" onSubmit={this.handleSubmit}>
+      <form className="newProduct" onSubmit={this.handleSubmit}>
         <input
           className="NewProduct-input"
           name="name"
@@ -51,6 +54,32 @@ class NewProduct extends Component {
           placeholder="Slug"
           type="text"
           value={slug}
+          onChange={this.handleChange}
+        />
+        <br></br>
+        <input
+          className="NewProduct-input"
+          name="price"
+          placeholder="Price"
+          type="float"
+          value={price}
+          onChange={this.handleChange}
+        />
+        <input
+          className="NewProduct-input"
+          name="category"
+          placeholder="Category"
+          type="text"
+          value={category}
+          onChange={this.handleChange}
+        />
+        <br></br>
+        <input
+          className="NewProduct-input"
+          name="url"
+          placeholder="Image URL"
+          type="text"
+          value={url}
           onChange={this.handleChange}
         />
         <input className="NewProduct-submit button" type="submit" />

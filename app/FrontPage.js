@@ -30,7 +30,7 @@ class FrontPage extends React.Component {
 
   addProduct = product => {
     API.graphql(graphqlOperation(CreateProduct, product)).then(response =>{
-      const newProduct = response.data.createProduct;
+      const newProduct = response.data.createGuitar;
     });
     
     this.setState({products: [newProduct, ...this.state.products]});
