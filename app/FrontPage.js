@@ -4,10 +4,6 @@ import Img from "./Img";
 import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
 import Dress from "./Dress"; 
-import NewProduct from "./NewProduct";
-
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
-import { CreateProduct } from './graphql';
 
 class FrontPage extends React.Component {
 
@@ -20,20 +16,6 @@ class FrontPage extends React.Component {
     const {allCategory} = this.props;
     allCategory;    
   }
-
-  addProduct = product => {
-    API.graphql(graphqlOperation(CreateProduct, product)).then(response => {
-      const newProduct = response.data.createGuitar;
-    });
-    
-    this.setState({products: [newProduct, ...this.state.products]});
-  };
-
-  removeProduct = product => {
-    this.setState({
-      products: this.state.products.filter(other => other.id !== product.id),
-    });
-  };
 
   render() {
     const {dresses, allCategory ,dressCategory, partyCategory} = this.props;
@@ -55,7 +37,6 @@ class FrontPage extends React.Component {
                   <Dress key={i} item={item} />
               ))}  
             </div>
-            <NewProduct onSubmit={this.addProduct} />
           </div>
       </Fragment>
     );

@@ -11,7 +11,7 @@ class Page extends React.Component {
 
     return (
       <div className="page">
-        page content
+        
       </div>
     );
   }

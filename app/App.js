@@ -6,6 +6,7 @@ import FrontPage from "./FrontPage";
 import styled, { css } from "styled-components";
 import ThemeContext from "./ThemeContext";
 import ProductPage from "./ProductPage";
+import AddProduct from "./AddProduct";
 //import { withAuthenticator } from 'aws-amplify-react';
 
 const styles = css`
@@ -52,8 +53,9 @@ class App extends Component {
                   dressCategory = {dressCategory} 
                   partyCategory = {partyCategory}
                 />
+                <AddProduct path="/add" />
                 <Page path="/:id"/>
-                <ProductPage path="products/:id" />
+                <ProductPage path="products/:id" />  
               </Router>
             </Container>
           </article>

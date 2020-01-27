@@ -38,11 +38,14 @@ mutation CreateProduct(
 }`;
 
 export const GetProduct = `
-query GetProduct {
-  getProduct(id: "b1f0dc83-e196-43f1-a5ff-afd4885905e7"){
+query GetGuitar {
+  getGuitar(id: "700b476f-3797-49f3-83c6-ebfb38d3e5cb"){
     id,
     name,
-    slug
+    slug,
+    url,
+    price,
+    category
   }
 }
 `;

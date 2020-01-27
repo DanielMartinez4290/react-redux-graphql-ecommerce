@@ -4,10 +4,6 @@ import Img from "./Img";
 import { Link } from "@reach/router";
 
 class Dress extends React.Component {
-  componentDidMount() {
-    console.log("passed in url is " + this.props.item.url);
-  }
-
   render() {
     return (
         <div className="dress">

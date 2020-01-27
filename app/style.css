@@ -7,6 +7,13 @@ a {
     text-decoration: none;
     color:black;
 }
+.colTwo {
+    width:50%;
+    float:left;
+}
+.h2{
+    font-size:20px;
+}
 
 /* Specific Styles */
 .productName {
@@ -50,12 +57,23 @@ a {
     border:1px solid black;
     overflow:scroll;
 }
+.newProduct {
+    text-align:left;
+    margin-top:10px;
+}
 .newProduct input {
     margin: 2px 2px 5px 2px;
 }
-
 .newProduct input[name="url"] {
-    width:400px;
+    width:500px;
+}
+.productPage .productName {
+    margin-top:5px;
+    text-align:left;
+}
+.addProduct {
+    width:100%;
+    text-align:left;
 }
 
 .aside {
@@ -77,7 +95,7 @@ a {
     padding:20px;
 }
 .nav ul li {
-    margin:auto;
+    margin-left:50px;
 }
 
 .nav ul li a {
