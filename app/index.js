@@ -17,7 +17,7 @@ const store = createStore(
 
 setTimeout(() => {
   store.dispatch({ type: 'ALL' })
-}, 400);
+}, 800);
 
 ReactDOM.render(
   <Provider store={store}>
