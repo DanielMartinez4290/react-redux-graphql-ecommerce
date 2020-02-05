@@ -67,15 +67,23 @@ a {
 .newProduct input[name="url"] {
     width:500px;
 }
-.productPage .productName {
-    margin-top:5px;
+.productPage {
+    width:590px;
+}
+.productPage .productHeader {
+    float:left;
     text-align:left;
+}
+.productPage .productData {
+    float:left;
+    font-weight:500;
+    text-align:left;
+    margin-left:4px;
 }
 .addProduct {
     width:100%;
     text-align:left;
 }
-
 .aside {
     width:40%;
     display: flex;

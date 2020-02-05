@@ -1,9 +1,8 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-
 import configuration from './aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
-import { GetProduct } from './graphql';
+import { GetProduct, GetProductByName } from './graphql';
 import Img from "./Img";
 
 Amplify.configure({...configuration});
@@ -16,11 +15,14 @@ class ProductPage extends React.Component {
   }
 
   componentDidMount() {
-    API.graphql(graphqlOperation(GetProduct))
-   .then(response => {
-     this.setState({productData: response.data.getGuitar});
-   })
-   .catch(console.error);
+    API.graphql(graphqlOperation(GetProduct,
+      { id: this.props.id }
+    ))
+    .then(response => {
+      this.setState({productData: response.data.getGuitar});
+    })
+    .catch(console.error);
+    
   }
 
   render() {
@@ -30,9 +32,32 @@ class ProductPage extends React.Component {
           <Img url={this.state.productData.url} />
         </div>
         <div className="colTwo">
-          <div className="productName">Name: {this.state.productData.name}</div>
-          <div className="productName">Price: {this.state.productData.price}</div>
-          <div className="productName">Category: {this.state.productData.category}</div>
+          <div>
+            <div className="productHeader">Name:</div>
+            <div className="productData">{this.state.productData.name}</div>
+            <br/><br/>
+          </div>
+          <div>
+            <div className="productHeader">Price:</div> 
+            <div className="productData">${this.state.productData.price}</div>
+            <br/><br/>
+          </div>
+          <div>
+            <div className="productHeader">Category:</div>
+            <div className="productData"> {this.state.productData.category}</div>
+            <br/><br/>
+          </div>
+          <div>
+            <div className="productHeader">Description:</div>
+            <div className="productData"> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <br/><br/>
+          </div>
         </div>
       </div>
     );

@@ -7,7 +7,7 @@ class Dress extends React.Component {
   render() {
     return (
         <div className="dress">
-          <Link to={"/products/" + this.props.item.slug}>
+          <Link to={"/products/" + this.props.item.id}>
           <Img url={this.props.item.url} />
           <div className="productName">{this.props.item.name}</div>
           <div className="productPrice">Price: ${this.props.item.price}</div>

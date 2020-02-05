@@ -38,8 +38,21 @@ mutation CreateProduct(
 }`;
 
 export const GetProduct = `
-query GetGuitar {
-  getGuitar(id: "700b476f-3797-49f3-83c6-ebfb38d3e5cb"){
+query GetGuitar($id: ID!) {
+  getGuitar(id: $id) {
+    id,
+    name,
+    slug,
+    url,
+    price,
+    category
+  }
+}
+`;
+
+export const GetProductByName = `
+query GetGuitarByName($slug: String!) {
+  getGuitarByName(slug: $slug) {
     id,
     name,
     slug,
