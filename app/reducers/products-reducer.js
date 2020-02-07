@@ -1,4 +1,4 @@
-import {ALL, GIBSON, FENDER} from '../actions/guitarActions';
+import {ALL, GIBSON, FENDER, SORTLOW, SORTHIGH} from '../actions/guitarActions';
 import configuration from '../aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
@@ -34,6 +34,22 @@ API.graphql(graphqlOperation(ListGuitars))
     if (action.type === FENDER){
       return {
         products: guitars.filter(guitar => guitar.category === 'Fender')
+      };
+    }
+
+    if (action.type === SORTLOW){
+      return {
+        products: guitars.sort(function(a, b) {
+          return a.price - b.price; 
+        }).filter(guitar => true)
+      };
+    }
+
+    if (action.type === SORTHIGH){
+      return {
+        products: guitars.sort(function(a, b) {
+          return b.price - a.price; 
+        }).filter(guitar => true)
       };
     }
   

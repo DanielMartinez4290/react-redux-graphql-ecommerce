@@ -18,21 +18,21 @@ class FrontPage extends React.Component {
   }
 
   render() {
-    const {products, allCategory ,gibsonCategory, fenderCategory} = this.props;
+    const {products, allCategory ,gibsonCategory, fenderCategory, sortLow, sortHigh} = this.props;
 
     return (
       <Fragment>
           <div className="frontPage">
             <div className="tagLine">
-                Guitar Store
+                Music Store
             </div>
             <div className="categories">
               <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>
               <CategoryHeader category={gibsonCategory} name="GIBSON"></CategoryHeader>
               <CategoryHeader category={fenderCategory} name="FENDER"></CategoryHeader>
             </div>
+            <SortHeader sortLow={sortLow} sortHigh={sortHigh}></SortHeader>
             <div className="firstRow"> 
-              {/*<SortHeader></SortHeader> */}
               { products.map((item, i) => (
                   <Product key={i} item={item} />
               ))}  

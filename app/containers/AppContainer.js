@@ -1,6 +1,6 @@
 import App from '../App';
 import { connect } from "react-redux"
-import { allCategory, gibsonCategory, fenderCategory } from '../actions/guitarActions';
+import { allCategory, gibsonCategory, fenderCategory, sortLow, sortHigh } from '../actions/guitarActions';
 
 const mapStateToProps = state => {
     return state;
@@ -9,7 +9,9 @@ const mapStateToProps = state => {
 const actionCreators = {
        allCategory,
        gibsonCategory,
-       fenderCategory
+       fenderCategory,
+       sortLow,
+       sortHigh
 };
    
 export default connect(

@@ -2,11 +2,6 @@ import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 
 class Img extends React.Component {
-
-  componentDidMount() {
-    
-  }
-
   render() {
     return (
       <div className="img">

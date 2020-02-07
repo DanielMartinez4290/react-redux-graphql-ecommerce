@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   render() {
-    const {count, products, gibsonCategory, fenderCategory, allCategory, dispatch} = this.props;
+    const {count, products, gibsonCategory, fenderCategory, allCategory, sortLow, sortHigh, dispatch} = this.props;
 
     return(
       <ThemeContext.Provider>
@@ -52,6 +52,8 @@ class App extends Component {
                   allCategory   = {allCategory}
                   gibsonCategory = {gibsonCategory} 
                   fenderCategory = {fenderCategory}
+                  sortLow = {sortLow}
+                  sortHigh = {sortHigh}
                 />
                 <AddProduct path="/add" />
                 <Page path="/:id"/>

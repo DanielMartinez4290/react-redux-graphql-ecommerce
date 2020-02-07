@@ -2,16 +2,11 @@ import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 
 class Page extends React.Component {
-  //state = { loading: true, showModal: false };
-
-  componentDidMount() {
-
-  }
   render() {
 
     return (
       <div className="page">
-        
+        page content  
       </div>
     );
   }

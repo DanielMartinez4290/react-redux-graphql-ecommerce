@@ -84,6 +84,16 @@ a {
     width:100%;
     text-align:left;
 }
+.sortHeader {
+    float:none;
+    width:920px;
+    text-align:right;
+    margin-bottom:10px;
+}
+.sortHeader span {
+    margin-left:10px;
+    cursor:pointer;
+}
 .aside {
     width:40%;
     display: flex;
