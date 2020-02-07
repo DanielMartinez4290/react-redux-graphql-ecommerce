@@ -18,8 +18,6 @@ API.graphql(graphqlOperation(ListGuitars))
   };
   
   const productsReducer = (state = initialState, action) => {
-    //console.log("the action is %", action.payload);
-    let productsArray = [];
   
     if (action.type === ALL){
       return {
@@ -28,26 +26,14 @@ API.graphql(graphqlOperation(ListGuitars))
     }
   
     if (action.type === GIBSON){
-      guitars.forEach(function (product) {
-        if (product.category === 'Gibson') {
-          productsArray.push(product); 
-        }
-      })
-  
       return {
-        products: productsArray
+        products: guitars.filter(guitar => guitar.category === 'Gibson')
       };
     }
   
     if (action.type === FENDER){
-      guitars.forEach(function (product) {
-        if (product.category === 'Fender') {
-          productsArray.push(product); 
-        }
-      })
-  
       return {
-        products: productsArray
+        products: guitars.filter(guitar => guitar.category === 'Fender')
       };
     }
   
