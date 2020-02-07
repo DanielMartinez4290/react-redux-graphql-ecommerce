@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import dressesReducer from './dresses-reducer';
+import productsReducer from './products-reducer';
 
 export default combineReducers({
-  dressesReducer
+  productsReducer
 });

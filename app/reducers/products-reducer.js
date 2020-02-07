@@ -4,53 +4,54 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
 
 Amplify.configure({...configuration});
-let guitarState = [];
+let guitars = [];
 
 // Make request to get guitars
 API.graphql(graphqlOperation(ListGuitars))
    .then(response => {
-     guitarState = response.data.listGuitars.items;
+     guitars = response.data.listGuitars.items;
    })
    .catch(console.error);
 
   const initialState = {
-    dresses: guitarState
+    products: guitars
   };
   
-  const dressesReducer = (state = initialState, action) => {
+  const productsReducer = (state = initialState, action) => {
+    //console.log("the action is %", action.payload);
     let dressesArray = [];
   
     if (action.type === ALL){
       return {
-        dresses: guitarState
+        products: guitars
       };
     }
   
     if (action.type === DRESSES){
-      guitarState.forEach(function (dress) {
+      guitars.forEach(function (dress) {
         if (dress.category === 'Gibson') {
           dressesArray.push(dress); 
         }
       })
   
       return {
-        dresses: dressesArray
+        products: dressesArray
       };
     }
   
     if (action.type === PARTY){
-      guitarState.forEach(function (dress) {
+      guitars.forEach(function (dress) {
         if (dress.category === 'Fender') {
           dressesArray.push(dress); 
         }
       })
   
       return {
-        dresses: dressesArray
+        products: dressesArray
       };
     }
   
     return state;
   };
 
-export default dressesReducer;
+export default productsReducer;

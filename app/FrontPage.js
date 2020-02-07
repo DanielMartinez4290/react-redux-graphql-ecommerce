@@ -3,7 +3,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Img from "./Img";
 import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
-import Dress from "./Dress"; 
+import Product from "./Product"; 
 
 class FrontPage extends React.Component {
 
@@ -18,7 +18,7 @@ class FrontPage extends React.Component {
   }
 
   render() {
-    const {dresses, allCategory ,dressCategory, partyCategory} = this.props;
+    const {products, allCategory ,dressCategory, partyCategory} = this.props;
 
     return (
       <Fragment>
@@ -33,8 +33,8 @@ class FrontPage extends React.Component {
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}
-              { dresses.map((item, i) => (
-                  <Dress key={i} item={item} />
+              { products.map((item, i) => (
+                  <Product key={i} item={item} />
               ))}  
             </div>
           </div>

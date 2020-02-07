@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   render() {
-    const {count, dresses, dressCategory, partyCategory, allCategory, dispatch} = this.props;
+    const {count, products, dressCategory, partyCategory, allCategory, dispatch} = this.props;
 
     return(
       <ThemeContext.Provider>
@@ -48,7 +48,7 @@ class App extends Component {
               <Router>
                 <FrontPage 
                   path="/" 
-                  dresses = {dresses} 
+                  products = {products} 
                   allCategory   = {allCategory}
                   dressCategory = {dressCategory} 
                   partyCategory = {partyCategory}

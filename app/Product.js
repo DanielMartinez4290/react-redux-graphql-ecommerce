@@ -3,7 +3,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Img from "./Img";
 import { Link } from "@reach/router";
 
-class Dress extends React.Component {
+class Product extends React.Component {
   render() {
     return (
         <div className="dress">
@@ -20,7 +20,7 @@ class Dress extends React.Component {
 export default function DetailsErrorBoundary(props) {
   return (
     <ErrorBoundary>
-      <Dress {...props} />
+      <Product {...props} />
     </ErrorBoundary>
   );
 }

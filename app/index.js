@@ -8,10 +8,10 @@ import Amplify from 'aws-amplify';
 import configuration from './aws-exports';
 Amplify.configure({...configuration});
 
-import dressesReducer from "./reducers/dresses-reducer";
+import productsReducer from "./reducers/products-reducer";
 
 const store = createStore(
- dressesReducer,
+ productsReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
