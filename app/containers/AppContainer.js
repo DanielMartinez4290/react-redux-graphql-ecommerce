@@ -1,6 +1,6 @@
 import App from '../App';
 import { connect } from "react-redux"
-import { allCategory, dressCategory, partyCategory } from '../actions/guitarActions';
+import { allCategory, gibsonCategory, fenderCategory } from '../actions/guitarActions';
 
 const mapStateToProps = state => {
     return state;
@@ -8,8 +8,8 @@ const mapStateToProps = state => {
    
 const actionCreators = {
        allCategory,
-       dressCategory,
-       partyCategory
+       gibsonCategory,
+       fenderCategory
 };
    
 export default connect(

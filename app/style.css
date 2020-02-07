@@ -118,7 +118,7 @@ a {
     margin-left:6%;
 }
 
-.dress{
+.product{
     /*display:flex;
      flex:1; */
     padding:2% 2% 1% 2%;
@@ -130,12 +130,12 @@ a {
     overflow:hidden;
 }
 
-.dress .img {
+.product .img {
     width:160px;
     margin:auto;
 }
 
-.dress:hover {
+.product:hover {
     border:1px solid black;
 }
 

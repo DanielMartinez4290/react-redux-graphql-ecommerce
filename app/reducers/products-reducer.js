@@ -1,4 +1,4 @@
-import {ALL, DRESSES, PARTY} from '../actions/guitarActions';
+import {ALL, GIBSON, FENDER} from '../actions/guitarActions';
 import configuration from '../aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
@@ -19,7 +19,7 @@ API.graphql(graphqlOperation(ListGuitars))
   
   const productsReducer = (state = initialState, action) => {
     //console.log("the action is %", action.payload);
-    let dressesArray = [];
+    let productsArray = [];
   
     if (action.type === ALL){
       return {
@@ -27,27 +27,27 @@ API.graphql(graphqlOperation(ListGuitars))
       };
     }
   
-    if (action.type === DRESSES){
-      guitars.forEach(function (dress) {
-        if (dress.category === 'Gibson') {
-          dressesArray.push(dress); 
+    if (action.type === GIBSON){
+      guitars.forEach(function (product) {
+        if (product.category === 'Gibson') {
+          productsArray.push(product); 
         }
       })
   
       return {
-        products: dressesArray
+        products: productsArray
       };
     }
   
-    if (action.type === PARTY){
-      guitars.forEach(function (dress) {
-        if (dress.category === 'Fender') {
-          dressesArray.push(dress); 
+    if (action.type === FENDER){
+      guitars.forEach(function (product) {
+        if (product.category === 'Fender') {
+          productsArray.push(product); 
         }
       })
   
       return {
-        products: dressesArray
+        products: productsArray
       };
     }
   

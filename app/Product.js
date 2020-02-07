@@ -6,7 +6,7 @@ import { Link } from "@reach/router";
 class Product extends React.Component {
   render() {
     return (
-        <div className="dress">
+        <div className="product">
           <Link to={"/products/" + this.props.item.id}>
           <Img url={this.props.item.url} />
           <div className="productName">{this.props.item.name}</div>

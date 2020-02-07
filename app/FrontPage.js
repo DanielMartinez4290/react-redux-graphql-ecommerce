@@ -18,7 +18,7 @@ class FrontPage extends React.Component {
   }
 
   render() {
-    const {products, allCategory ,dressCategory, partyCategory} = this.props;
+    const {products, allCategory ,gibsonCategory, fenderCategory} = this.props;
 
     return (
       <Fragment>
@@ -28,8 +28,8 @@ class FrontPage extends React.Component {
             </div>
             <div className="categories">
               <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>
-              <CategoryHeader category={dressCategory} name="GIBSON"></CategoryHeader>
-              <CategoryHeader category={partyCategory} name="FENDER"></CategoryHeader>
+              <CategoryHeader category={gibsonCategory} name="GIBSON"></CategoryHeader>
+              <CategoryHeader category={fenderCategory} name="FENDER"></CategoryHeader>
             </div>
             <div className="firstRow"> 
               {/*<SortHeader></SortHeader> */}

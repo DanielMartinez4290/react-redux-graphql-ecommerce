@@ -1,15 +1,15 @@
 export const ALL     = 'ALL'; 
-export const DRESSES = 'DRESSES'; 
-export const PARTY   = 'PARTY'; 
+export const GIBSON  = 'GIBSON'; 
+export const FENDER  = 'FENDER'; 
 
 export const allCategory = () => ({
     type: ALL
   });
   
-export  const dressCategory = () => ({
-    type: DRESSES
+export  const gibsonCategory = () => ({
+    type: GIBSON
   });
   
- export const partyCategory = () => ({
-    type: PARTY
+ export const fenderCategory = () => ({
+    type: FENDER
   });
