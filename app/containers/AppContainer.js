@@ -7,11 +7,11 @@ const mapStateToProps = state => {
 };
    
 const actionCreators = {
-       allCategory,
-       gibsonCategory,
-       fenderCategory,
-       sortLow,
-       sortHigh
+    allCategory,
+    gibsonCategory,
+    fenderCategory,
+    sortLow,
+    sortHigh
 };
    
 export default connect(
