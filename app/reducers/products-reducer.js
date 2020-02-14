@@ -1,8 +1,12 @@
-import {ALL, GIBSON, FENDER, SORTLOW, SORTHIGH} from '../actions/guitarActions';
+import {ALL, GIBSON, FENDER, SORTLOW, SORTHIGH, FETCH_CHARACTERS_FULFILLED} from '../actions/guitarActions';
   
 const productsReducer = (state = {products: []}, action) => {
     if (action.type === ALL){
       return {products: action.payload.products};
+    }
+
+    if (action.type === FETCH_CHARACTERS_FULFILLED) {
+      return action.payload.characters;
     }
   
     if (action.type === GIBSON){
