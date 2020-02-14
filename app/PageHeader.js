@@ -4,13 +4,7 @@ import menuItems from "./menuitems";
 import NavItem from "./NavItem";
 
 class PageHeader extends React.Component {
-  //state = { loading: true, showModal: false };
-  componentDidMount() {
-    
-  }
-
   render() {
-
     return (
       <div className="header">
         <div className="nav">
