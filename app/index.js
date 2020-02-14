@@ -7,7 +7,6 @@ import AppContainer from './containers/AppContainer';
 import thunk from 'redux-thunk';
 import { createEpicMiddleware } from 'redux-observable';
 import rootEpic from './fetch-character-epic';
-
 import productsReducer from "./reducers/products-reducer";
 import { fetchProducts } from './actions/guitarActions';
 
