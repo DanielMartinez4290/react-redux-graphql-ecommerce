@@ -16,8 +16,8 @@ const epicMiddleware = createEpicMiddleware();
 const store = createStore(
   productsReducer,
   //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  //applyMiddleware(thunk)
-  applyMiddleware(epicMiddleware)
+  applyMiddleware(thunk)
+  //applyMiddleware(epicMiddleware)
 );
 
 epicMiddleware.run(rootEpic);
