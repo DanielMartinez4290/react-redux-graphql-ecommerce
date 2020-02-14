@@ -5,20 +5,6 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
 Amplify.configure({...configuration});
 
-export const fetchCharacters = searchTerm => {
-  return {
-    type: FETCH_CHARACTERS,
-    payload: {searchTerm},
-  };
-};
-
-export const fetchCharactersFulfilled = payload => {
-  return {
-    type: FETCH_CHARACTERS_FULFILLED,
-    payload,
-  };
-};
-
 /* Action Types */
 export const ALL      = 'ALL'; 
 export const GIBSON   = 'GIBSON'; 
@@ -64,3 +50,18 @@ export function sortLow () {
 export function sortHigh () {
   return { type: SORTHIGH, payload: {products} }
 }
+
+/* Epics */
+export const fetchCharacters = searchTerm => {
+  return {
+    type: FETCH_CHARACTERS,
+    payload: {searchTerm},
+  };
+};
+
+export const fetchCharactersFulfilled = payload => {
+  return {
+    type: FETCH_CHARACTERS_FULFILLED,
+    payload,
+  };
+};
