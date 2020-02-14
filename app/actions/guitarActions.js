@@ -1,6 +1,4 @@
 import configuration from '../aws-exports';
-export const FETCH_CHARACTERS = 'FETCH_CHARACTERS';
-export const FETCH_CHARACTERS_FULFILLED = 'FETCH_CHARACTERS_FULFILLED';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
 Amplify.configure({...configuration});
@@ -11,6 +9,8 @@ export const GIBSON   = 'GIBSON';
 export const FENDER   = 'FENDER';
 export const SORTLOW  = 'SORTLOW';
 export const SORTHIGH = 'SORTHIGH';
+export const FETCH_CHARACTERS           = 'FETCH_CHARACTERS';
+export const FETCH_CHARACTERS_FULFILLED = 'FETCH_CHARACTERS_FULFILLED';
 
 /* Thunks */
 let products = [];
