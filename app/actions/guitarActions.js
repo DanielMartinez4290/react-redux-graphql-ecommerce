@@ -19,7 +19,6 @@ export const fetchCharactersFulfilled = payload => {
   };
 };
 
-
 /* Action Types */
 export const ALL      = 'ALL'; 
 export const GIBSON   = 'GIBSON'; 
