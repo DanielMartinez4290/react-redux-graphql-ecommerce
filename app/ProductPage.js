@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
+import CategoryProduct from "./CategoryProduct";
 import configuration from './aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { GetProduct, GetProductByName } from './graphql';
@@ -22,7 +23,6 @@ class ProductPage extends React.Component {
       this.setState({productData: response.data.getGuitar});
     })
     .catch(console.error);
-    
   }
 
   render() {
@@ -58,6 +58,9 @@ class ProductPage extends React.Component {
             </div>
             <br/><br/>
           </div>
+        </div>
+        <div className="colOne">
+            <CategoryProduct></CategoryProduct>
         </div>
       </div>
     );
