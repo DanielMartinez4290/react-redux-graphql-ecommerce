@@ -13,6 +13,26 @@ export const ListGuitars = `
   }
 `;
 
+export const ListGuitarsByCategory = `
+  query ListGuitars {
+    listGuitars(filter: {
+      category: {
+        contains: "Fender"
+      }
+    }, limit: 6)
+    {
+      items {
+        id,
+        name,
+        slug,
+        url,
+        price,
+        category
+      }
+    }
+  }
+`;
+
 export const CreateProduct = `
 mutation CreateProduct(
     $name: String!

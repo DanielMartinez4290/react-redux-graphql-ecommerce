@@ -72,7 +72,7 @@ a {
     width:500px;
 }
 .productPage {
-    width:590px;
+    width:850px;
 }
 .productPage .productHeader {
     float:left;
@@ -84,6 +84,10 @@ a {
     text-align:left;
     margin-left:4px;
 }
+.productPage .img {
+    max-width: 200px;
+}
+
 .addProduct {
     width:100%;
     text-align:left;
@@ -137,6 +141,10 @@ a {
     /*border: 1px solid black;*/
 }
 
+.categoryProduct .product:first-child {
+    margin-left:1%;
+}
+
 .product{
     /*display:flex;
      flex:1; */
@@ -147,6 +155,18 @@ a {
     max-height:220px;
     width:24%;
     overflow:hidden;
+}
+.productPage .product {
+    width:17%;
+}
+.categoryProduct .product{
+    float:left;
+    padding:1%;
+    margin-left:5%;
+}
+.categoryProduct  h3{
+    text-align:left;
+    margin-bottom:0px;
 }
 
 .product .img {
