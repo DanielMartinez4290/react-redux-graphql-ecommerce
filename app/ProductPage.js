@@ -5,6 +5,7 @@ import configuration from './aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { GetProduct, GetProductByName } from './graphql';
 import Img from "./Img";
+import { Router, Link } from "@reach/router";
 
 Amplify.configure({...configuration});
 
@@ -16,6 +17,7 @@ class ProductPage extends React.Component {
   }
 
   componentDidMount() {
+    console.log("called again");
     API.graphql(graphqlOperation(GetProduct,
       { id: this.props.id }
     ))
@@ -60,7 +62,12 @@ class ProductPage extends React.Component {
           </div>
         </div>
         <div className="colOne">
-            <CategoryProduct></CategoryProduct>
+        <Router primary={false}>
+            <ProductPage path="products/:id" />
+         </Router>
+
+         <CategoryProduct></CategoryProduct>
+            
         </div>
       </div>
     );

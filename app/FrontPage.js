@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import Img from "./Img";
 import CategoryHeader from "./CategoryHeader";
 import SortHeader from "./SortHeader";
 import Product from "./Product"; 
 
 class FrontPage extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {products:[]}

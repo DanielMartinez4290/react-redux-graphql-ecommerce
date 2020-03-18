@@ -1,8 +1,10 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import { API, graphqlOperation } from 'aws-amplify';
+import { Router } from "@reach/router";
 import { ListGuitarsByCategory } from './graphql';
 import Product from "./Product"; 
+import ProductPage from "./ProductPage";
 
 class CategoryProduct extends React.Component {
 

@@ -2,6 +2,8 @@ import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
 import Img from "./Img";
 import { Link } from "@reach/router";
+import ProductPage from "./ProductPage";
+import { Router } from "@reach/router";
 
 class Product extends React.Component {
 
