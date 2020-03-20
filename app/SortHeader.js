@@ -1,12 +1,8 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 
-
 class SortHeader extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {value: 'all'};

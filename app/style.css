@@ -164,15 +164,22 @@ a {
     margin-top:2%;
     margin-left:4%;
     margin-bottom:2%;
-    max-height:220px;
+    max-height:230px;
     width:28%;
     overflow:hidden;
 }
 .product a, .product a:hover {
     color:black;
+    text-decoration: none;;
 }
 .productPage .product {
     width:17%;
+}
+.productPage .categoryProduct .product{
+    padding:2%;
+    width:20%;
+    margin:0 0 0 4%;
+    max-height:242px;
 }
 .categoryProduct .product{
     float:left;
@@ -183,16 +190,13 @@ a {
     text-align:left;
     margin-bottom:0px;
 }
-
 .product .img {
     width:160px;
     margin:auto;
 }
-
 .product:hover {
     border:1px solid black;
 }
-
 .press {
     margin-top:20px;
     margin-bottom:20px;
