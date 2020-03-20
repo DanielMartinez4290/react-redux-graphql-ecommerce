@@ -29,7 +29,7 @@ class FrontPage extends React.Component {
               <CategoryHeader category={gibsonCategory} name="GIBSON"></CategoryHeader>
               <CategoryHeader category={fenderCategory} name="FENDER"></CategoryHeader>
             </div>
-            <SortHeader sortLow={sortLow} sortHigh={sortHigh}></SortHeader>
+            <SortHeader sortLow={sortLow} sortHigh={sortHigh} allCategory={allCategory}></SortHeader>
             <div className="firstRow"> 
               { products.map((item, i) => (
                   <Product key={i} item={item} />

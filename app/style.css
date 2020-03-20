@@ -102,6 +102,18 @@ a {
     margin-left:10px;
     cursor:pointer;
 }
+.sortHeader form {
+    width:205px;
+    float:right;
+    margin-right:-32px;
+}
+.sortHeader select {
+    width:145px;
+}
+.sortHeader label{
+    float:left;
+    margin:5px 5px 0 0;
+}
 .aside {
     width:40%;
     display: flex;
@@ -153,8 +165,11 @@ a {
     margin-left:4%;
     margin-bottom:2%;
     max-height:220px;
-    width:24%;
+    width:28%;
     overflow:hidden;
+}
+.product a, .product a:hover {
+    color:black;
 }
 .productPage .product {
     width:17%;
