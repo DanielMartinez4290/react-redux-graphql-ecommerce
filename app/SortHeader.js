@@ -17,8 +17,6 @@ class SortHeader extends React.Component {
   handleChange(event) {
     this.setState({value: event.target.value});
 
-    console.log("aeasdf", event.target.value);
-
     if (event.target.value == 'low') {
       this.props.sortLow();
     } else if (event.target.value == 'high') {
