@@ -124,7 +124,6 @@ a {
 .aside-1 {
     order:-1;
 }
-
 .nav ul {
     display:flex;
     list-style: none;
@@ -135,12 +134,57 @@ a {
 .nav ul li {
     margin-left:50px;
 }
-
+.nav ul li:nth-child(3) {
+    margin-left:520px;
+    cursor:pointer;
+}
 .nav ul li a {
     text-decoration:none;
     color:black;
 }
-
+#root {/*
+    background-color:gray;
+    */
+}
+#modal {
+    position: fixed;
+    z-index:1000;
+    right:0;
+    height:100%;
+}
+#modal div {
+    height:100%;
+    background-color:white;
+}
+.cartModal {
+    height:100%;
+    width:300px;
+}
+.cartModal button{
+    float:right;
+    margin-right:30px;
+    margin:10px 40px 0 0;
+    font-size:25px;
+}
+.cartModal h3 {
+    text-align:center;
+    margin:0;
+    padding-top: 35px;
+}
+.cartModal p {
+    text-align:center;
+    font-size:17px;
+    margin-top:30px;
+}
+.cartModal .continueToCheckout{
+    background-color: black;
+    color:white;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    height:50px;
+    font-size:17px;
+}
 .categoryHeader{
     float:left;
     cursor:pointer;

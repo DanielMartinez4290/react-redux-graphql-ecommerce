@@ -3,7 +3,6 @@ import ErrorBoundary from "./ErrorBoundary";
 
 class Page extends React.Component {
   render() {
-
     return (
       <div className="page">
         page content  
