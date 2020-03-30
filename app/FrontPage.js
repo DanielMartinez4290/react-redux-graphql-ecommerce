@@ -22,7 +22,7 @@ class FrontPage extends React.Component {
       <Fragment>
           <div className="frontPage">
             <div className="tagLine">
-                Music Store
+                Music Store 
             </div>
             <div className="categories">
               <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>

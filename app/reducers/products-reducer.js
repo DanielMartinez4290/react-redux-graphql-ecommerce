@@ -1,8 +1,8 @@
 import {ALL, GIBSON, FENDER, SORTLOW, SORTHIGH, FETCH_CHARACTERS_FULFILLED} from '../actions/guitarActions';
   
-const productsReducer = (state =  {products: []}, action) => {
+const productsReducer = (state =  {products: [], cart:'maaybe'}, action) => {
     if (action.type === ALL){
-      return {products: action.payload.products};
+      return {products: action.payload.products, cart: 'yesss'};
     }
 
     if (action.type === FETCH_CHARACTERS_FULFILLED) {

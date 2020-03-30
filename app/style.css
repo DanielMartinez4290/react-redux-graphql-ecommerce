@@ -204,7 +204,7 @@ a {
 .product{
     /*display:flex;
      flex:1; */
-    padding:2% 2% 1% 2%;
+    padding:2% 0 1% 0;
     margin-top:2%;
     margin-left:4%;
     margin-bottom:2%;
@@ -215,6 +215,32 @@ a {
 .product a, .product a:hover {
     color:black;
     text-decoration: none;;
+}
+.product .img {
+    width:160px;
+    margin:auto;
+}
+.product:hover {
+    border:1px solid black;
+}
+.product .hoverProduct{
+    position:relative;
+    top:-159px;
+}
+.product .hoverProduct:hover{
+    /*
+    background-color: gray;
+    height:200px;
+    opacity:.9;
+    */
+}
+.product .hoverProduct button{
+    background-color: black;
+    color:white;
+    margin-top:8px;
+    padding:5px 15px;
+    opacity:1;
+    border:1px solid white;
 }
 .productPage .product {
     width:17%;
@@ -234,13 +260,7 @@ a {
     text-align:left;
     margin-bottom:0px;
 }
-.product .img {
-    width:160px;
-    margin:auto;
-}
-.product:hover {
-    border:1px solid black;
-}
+
 .press {
     margin-top:20px;
     margin-bottom:20px;
