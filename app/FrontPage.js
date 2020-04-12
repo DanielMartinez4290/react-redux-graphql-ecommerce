@@ -16,7 +16,7 @@ class FrontPage extends React.Component {
   }
 
   render() {
-    const {products, allCategory ,gibsonCategory, fenderCategory, sortLow, sortHigh} = this.props;
+    const {addToCart, products, allCategory ,gibsonCategory, fenderCategory, sortLow, sortHigh} = this.props;
 
     return (
       <Fragment>
@@ -25,15 +25,15 @@ class FrontPage extends React.Component {
                 Music Store 
             </div>
             <div className="categories">
-              <CategoryHeader category={allCategory} name="ALL"></CategoryHeader>
-              <CategoryHeader category={gibsonCategory} name="GIBSON"></CategoryHeader>
-              <CategoryHeader category={fenderCategory} name="FENDER"></CategoryHeader>
+              <CategoryHeader category={allCategory} name="ALL" />
+              <CategoryHeader category={gibsonCategory} name="GIBSON" />
+              <CategoryHeader category={fenderCategory} name="FENDER" />
             </div>
             <SortHeader sortLow={sortLow} sortHigh={sortHigh} allCategory={allCategory}></SortHeader>
             <div className="firstRow"> 
               { products.map((item, i) => (
-                  <Product key={i} item={item} />
-              ))}  
+                  <Product key={i} item={item} addToCart={addToCart} />
+              )) }  
             </div>
           </div>
       </Fragment>

@@ -1,5 +1,6 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
+import CartProduct from "./CartProduct"
 
 class CartModal extends React.Component {
   render() {
@@ -16,7 +17,12 @@ class CartModal extends React.Component {
             <span aria-hidden="true">&times;</span>
         </button>
         <h3>Your bag</h3>
-        <p>You have no items in your bag</p>
+        { this.props.cart.map((item, i) => (
+          <p>{item.name}</p>
+        )) }
+        {!this.props.cart.length ? (
+          <p>You have no items in your bag</p>
+        ): null}
         <button className="continueToCheckout">Continue to checkout</button>
       </div>
     );

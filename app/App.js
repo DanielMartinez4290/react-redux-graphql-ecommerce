@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import PageHeader from "./PageHeader";
 import Page from "./Page";
 import FrontPage from "./FrontPage";
@@ -27,33 +27,25 @@ const Container = styled.div`
 `;
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      results: this.props
-    }
-  }
-
   render() {
-    const {count, products, gibsonCategory, fenderCategory, allCategory, sortLow, sortHigh, dispatch} = this.props;
-
     return(
       <ThemeContext.Provider>
         <div className="wrapper">
           <header className="header">   
-            <PageHeader/>
+            <PageHeader cart = {this.props.cart} />
           </header>
           <article className="main">
             <Container>
               <Router>
                 <FrontPage 
                   path="/" 
-                  products = {products} 
-                  allCategory   = {allCategory}
-                  gibsonCategory = {gibsonCategory} 
-                  fenderCategory = {fenderCategory}
-                  sortLow = {sortLow}
-                  sortHigh = {sortHigh}
+                  products = {this.props.products} 
+                  allCategory   = {this.props.allCategory}
+                  gibsonCategory = {this.props.gibsonCategory} 
+                  fenderCategory = {this.props.fenderCategory}
+                  sortLow = {this.props.sortLow}
+                  sortHigh = {this.props.sortHigh}
+                  addToCart = {this.props.addToCart}
                 />
                 <AddProduct path="/add" />
                 <Page path="/:id"/>
@@ -62,7 +54,7 @@ class App extends Component {
             </Container>
           </article>
           <footer className="footer">
-            <PageHeader/>
+            <PageHeader cart = {this.props.cart} />
           </footer>
         </div>
       </ThemeContext.Provider>

@@ -19,6 +19,7 @@ class PageHeader extends React.Component {
   toggleModal = () => this.setState({ showModal: !this.state.showModal }); 
 
   render() {
+    const {cart} = this.props;
     var handleToUpdate  =   this.handleToUpdate;
 
     const { showModal } = this.state; 
@@ -37,7 +38,11 @@ class PageHeader extends React.Component {
         </div>
         {showModal ? (
           <Modal>
-            <CartModal handleToUpdate = {handleToUpdate.bind(this)} ></CartModal>
+            <CartModal 
+              handleToUpdate = {handleToUpdate.bind(this)} 
+              cart = {cart}
+            >
+            </CartModal>
           </Modal>
         ): null}
       </div>

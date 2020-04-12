@@ -36,7 +36,7 @@ class Product extends React.Component {
               { this.state.isHovering &&
                   <div className="hoverProduct">
                   <Link to={"/products/" + this.props.item.id}><button>View Gallery</button><br/></Link>
-                    <button>Add to Cart</button>
+                    <button onClick={() => this.props.addToCart(this.props.item.id)}>Add to Cart</button>
                   </div>
               }
           </div>
