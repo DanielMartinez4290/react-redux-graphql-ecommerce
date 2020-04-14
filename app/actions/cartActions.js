@@ -1,5 +1,17 @@
 /* Action Types */
 export const ADD_TO_CART  = 'ADD_TO_CART'; 
+export const SHOW_CART_MODAL = 'SHOW_CART_MODAL';
+export const HIDE_CART_MODAL = 'HIDE_CART_MODAL';
+
+// show cart modal
+export function showCartModal () {
+    return { type: SHOW_CART_MODAL }
+}
+
+//hide cart modal
+export function hideCartModal () {
+    return { type: HIDE_CART_MODAL }
+}
 
 //add cart action
 export const addToCart= (id)=>{

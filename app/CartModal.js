@@ -1,8 +1,12 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import CartProduct from "./CartProduct"
+import CartProduct from "./CartProduct";
 
 class CartModal extends React.Component {
+  componentDidUpdate(prevProps) {
+    console.log('asdfa',this.props.cart);
+  }
+
   render() {
     var handleToUpdate  =   this.props.handleToUpdate;
 
@@ -12,15 +16,15 @@ class CartModal extends React.Component {
             type="button" 
             class="close" 
             aria-label="Close" 
-            onClick={() => handleToUpdate('someVar')}
+            onClick={this.props.hideCartModal}
         >
             <span aria-hidden="true">&times;</span>
         </button>
         <h3>Your bag</h3>
         { this.props.cart.map((item, i) => (
-          <p>{item.name}</p>
+            <CartProduct item={item} key = {i} />
         )) }
-        {!this.props.cart.length ? (
+        { !this.props.cart.length ? (
           <p>You have no items in your bag</p>
         ): null}
         <button className="continueToCheckout">Continue to checkout</button>

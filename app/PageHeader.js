@@ -8,21 +8,24 @@ import CartModal from "./CartModal";
 class PageHeader extends React.Component {
   constructor(props) {
     super(props);
-    var handleToUpdate  = this.handleToUpdate.bind(this);
+    
+    this.handleToUpdate.bind(this);
   }
 
   handleToUpdate(someArg){
     this.setState({showModal:false});
   }
 
-  state = {showModal: false}; 
+  componentDidUpdate(prevProps){
+    if(this.props.showCart !== prevProps.showCart) {
+      this.setState({showModal:this.props.showCart});
+    }
+  }
+  
   toggleModal = () => this.setState({ showModal: !this.state.showModal }); 
 
   render() {
-    const {cart} = this.props;
     var handleToUpdate  =   this.handleToUpdate;
-
-    const { showModal } = this.state; 
 
     return (
       <div className="header">
@@ -31,18 +34,18 @@ class PageHeader extends React.Component {
             {menuItems.map((item, i) => (
               <NavItem key={i} item={item} />
             ))}
-            <li onClick={this.toggleModal}>
-              Cart <span class="glyphicon glyphicon-shopping-cart"></span>
+            <li onClick={this.props.showCartModal}>
+              Cart <span class="glyphicon glyphicon-shopping-cart" />
             </li>  
           </ul>
         </div>
-        {showModal ? (
+        {this.props.showCart ? (
           <Modal>
             <CartModal 
               handleToUpdate = {handleToUpdate.bind(this)} 
-              cart = {cart}
-            >
-            </CartModal>
+              cart = {this.props.cart}
+              hideCartModal = {this.props.hideCartModal}
+            />
           </Modal>
         ): null}
       </div>

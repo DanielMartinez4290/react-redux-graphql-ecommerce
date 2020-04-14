@@ -5,19 +5,11 @@ import SortHeader from "./SortHeader";
 import Product from "./Product"; 
 
 class FrontPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {products:[]}
-  }
-
   componentDidMount() {
-    const {allCategory} = this.props;
-    allCategory;    
+    this.props.allCategory;
   }
 
   render() {
-    const {addToCart, products, allCategory ,gibsonCategory, fenderCategory, sortLow, sortHigh} = this.props;
-
     return (
       <Fragment>
           <div className="frontPage">
@@ -25,14 +17,22 @@ class FrontPage extends React.Component {
                 Music Store 
             </div>
             <div className="categories">
-              <CategoryHeader category={allCategory} name="ALL" />
-              <CategoryHeader category={gibsonCategory} name="GIBSON" />
-              <CategoryHeader category={fenderCategory} name="FENDER" />
+              <CategoryHeader category={this.props.allCategory} name="ALL" />
+              <CategoryHeader category={this.props.gibsonCategory} name="GIBSON" />
+              <CategoryHeader category={this.props.fenderCategory} name="FENDER" />
             </div>
-            <SortHeader sortLow={sortLow} sortHigh={sortHigh} allCategory={allCategory}></SortHeader>
+            <SortHeader 
+               sortLow={this.props.sortLow} 
+               sortHigh={this.props.sortHigh} 
+               allCategory={this.props.allCategory} 
+            />
             <div className="firstRow"> 
-              { products.map((item, i) => (
-                  <Product key={i} item={item} addToCart={addToCart} />
+              { this.props.products.map((item, i) => (
+                  <Product 
+                    key={i} 
+                    item={item} 
+                    addToCart={this.props.addToCart} 
+                  />
               )) }  
             </div>
           </div>

@@ -32,7 +32,12 @@ class App extends Component {
       <ThemeContext.Provider>
         <div className="wrapper">
           <header className="header">   
-            <PageHeader cart = {this.props.cart} />
+            <PageHeader 
+               cart = {this.props.cart} 
+               showCart = {this.props.showCart} 
+               showCartModal = {this.props.showCartModal}
+               hideCartModal = {this.props.hideCartModal}
+            />
           </header>
           <article className="main">
             <Container>

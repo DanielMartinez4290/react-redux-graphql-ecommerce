@@ -1,7 +1,7 @@
 import App from '../App';
 import { connect } from "react-redux"
 import { allCategory, gibsonCategory, fenderCategory, sortLow, sortHigh } from '../actions/guitarActions';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, showCartModal, hideCartModal } from '../actions/cartActions';
 
 const mapStateToProps = state => {
     return state;
@@ -13,7 +13,9 @@ const actionCreators = {
     fenderCategory,
     sortLow,
     sortHigh,
-    addToCart
+    addToCart,
+    showCartModal,
+    hideCartModal
 };
    
 export default connect(

@@ -185,6 +185,24 @@ a {
     height:50px;
     font-size:17px;
 }
+.cartModal .cartProduct {
+    height:80px !important;
+    margin-top:30px;
+    padding-left:20px;
+}
+.cartModal .cartProduct .productImg, .cartModal .cartProduct .productInfo {
+    float:left;
+}
+.cartModal .cartProduct .productName {
+    height: 20px !important;
+    font-weight:700;
+}
+.cartModal .cartProduct .productPrice {
+    letter-spacing:.5px;
+}
+.cartModal .cartProduct .productImg img{
+    width:80px;
+}
 .categoryHeader{
     float:left;
     cursor:pointer;
