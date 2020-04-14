@@ -45,6 +45,7 @@ class PageHeader extends React.Component {
               handleToUpdate = {handleToUpdate.bind(this)} 
               cart = {this.props.cart}
               hideCartModal = {this.props.hideCartModal}
+              total = {this.props.total}
             />
           </Modal>
         ): null}

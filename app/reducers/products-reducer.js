@@ -4,20 +4,25 @@ import { ADD_TO_CART, SHOW_CART_MODAL, HIDE_CART_MODAL } from '../actions/cartAc
 const initState = {
     products: [],
     cart: [],
-    showCart: false
+    showCart: false,
+    total: 0
 }
 
 const productsReducer = (state =  initState, action) => {
     if (action.type === ALL){
-      return {products: action.payload.products, cart: []};
+      return {
+        ...state,
+        products: action.payload.products 
+      };
     }
 
     if (action.type === ADD_TO_CART){ 
-      let addedItem = state.products.find(item=> item.id === action.id)
+      let addedItem = state.products.find(item=> item.id === action.id);
       return {
         ...state,
         cart: [...state.cart, addedItem],
-        showCart:true
+        showCart:true,
+        total:state.total + addedItem.price
       }
     }
 

@@ -12,22 +12,27 @@ class CartModal extends React.Component {
 
     return (
       <div className="cartModal">
-        <button 
-            type="button" 
-            class="close" 
-            aria-label="Close" 
-            onClick={this.props.hideCartModal}
-        >
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <h3>Your bag</h3>
-        { this.props.cart.map((item, i) => (
-            <CartProduct item={item} key = {i} />
-        )) }
-        { !this.props.cart.length ? (
-          <p>You have no items in your bag</p>
-        ): null}
-        <button className="continueToCheckout">Continue to checkout</button>
+        <div className="cart">
+          <button 
+              type="button" 
+              class="close" 
+              aria-label="Close" 
+              onClick={this.props.hideCartModal}
+          >
+              <span aria-hidden="true">&times;</span>
+          </button>
+          <h3>Your bag</h3>
+          { this.props.cart.map((item, i) => (
+              <CartProduct item={item} key = {i} />
+          )) }
+          { !this.props.cart.length ? (
+            <p>You have no items in your bag</p>
+          ): null}
+          <p className="cartTotal">Total: ${this.props.total.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+        </div>
+        <div className="checkoutContainer">
+          <button className="continueToCheckout">Continue to checkout</button>
+        </div>
       </div>
     );
   }

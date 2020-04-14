@@ -37,6 +37,7 @@ class App extends Component {
                showCart = {this.props.showCart} 
                showCartModal = {this.props.showCartModal}
                hideCartModal = {this.props.hideCartModal}
+               total = {this.props.total}
             />
           </header>
           <article className="main">

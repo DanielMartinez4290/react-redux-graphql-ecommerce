@@ -158,7 +158,10 @@ a {
 }
 .cartModal {
     height:100%;
-    width:300px;
+    width:340px;
+}
+.cartModal .cart{
+    overflow:scroll;
 }
 .cartModal button{
     float:right;
@@ -185,6 +188,10 @@ a {
     height:50px;
     font-size:17px;
 }
+.cartModal .checkoutContainer{
+    padding:2px;
+    background-color:blue;
+}
 .cartModal .cartProduct {
     height:80px !important;
     margin-top:30px;
@@ -202,6 +209,9 @@ a {
 }
 .cartModal .cartProduct .productImg img{
     width:80px;
+}
+.cartModal .cartTotal{
+    padding-bottom:80px;
 }
 .categoryHeader{
     float:left;
