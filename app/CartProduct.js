@@ -9,7 +9,20 @@ class CartProduct extends React.Component {
         <div className="productImg"><Img url={this.props.item.url} /> </div>
         <div className="productInfo">
           <div className="productName">{this.props.item.name}</div>
-          <div className="productPrice">${this.props.item.price.toFixed(2)}</div>
+          <div>
+            <span className="productPrice">${this.props.item.price.toFixed(2)}</span>
+            <span className="cartBtns">
+              <button type="button" className="btn btn-default btn-sm qtyBtn">
+                <span className="glyphicon glyphicon-plus"></span>
+              </button>
+            </span>
+            <span className="cartBtns productQty">1</span>
+            <span className="cartBtns">
+              <button type="button" className="btn btn-default btn-sm qtyBtn cartBtns">
+                <span className="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+          </div>
         </div>
       </div>
     );

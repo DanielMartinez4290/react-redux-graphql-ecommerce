@@ -182,22 +182,26 @@ a {
 .cartModal .continueToCheckout{
     background-color: black;
     color:white;
-    width:100%;
+    width:96%;
     position: absolute;
-    bottom:0;
-    height:50px;
+    bottom:6px;
+    height:45px;
     font-size:17px;
 }
 .cartModal .checkoutContainer{
-    padding:2px;
-    background-color:blue;
+    padding:8px;
+    background-color:rgb(209, 177, 110) !important;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:59px !important;
 }
 .cartModal .cartProduct {
     height:80px !important;
     margin-top:30px;
     padding-left:20px;
 }
-.cartModal .cartProduct .productImg, .cartModal .cartProduct .productInfo {
+.cartModal .cartProduct .productImg, .cartModal .cartProduct .productInfo, .cartModal span {
     float:left;
 }
 .cartModal .cartProduct .productName {
@@ -206,9 +210,24 @@ a {
 }
 .cartModal .cartProduct .productPrice {
     letter-spacing:.5px;
+    margin-right:45px;
+}
+.cartModal .cartProduct .cartBtns {
+    margin-left:4px;
+}
+.cartModal .cartProduct .productQty{
+    margin-top:4px;
 }
 .cartModal .cartProduct .productImg img{
     width:80px;
+}
+.cartModal .cartProduct .qtyBtn{
+    margin:0;
+    height:28px;
+}
+.cartModal .cartProduct .glyphicon-plus, .cartModal .cartProduct .glyphicon-minus{
+    font-size:12px;
+    vertical-align: top;
 }
 .cartModal .cartTotal{
     padding-bottom:80px;

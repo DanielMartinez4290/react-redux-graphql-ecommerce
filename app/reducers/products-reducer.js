@@ -18,6 +18,8 @@ const productsReducer = (state =  initState, action) => {
 
     if (action.type === ADD_TO_CART){ 
       let addedItem = state.products.find(item=> item.id === action.id);
+      //let existed_item= state.cart.find(item=> item.id === action.id);
+
       return {
         ...state,
         cart: [...state.cart, addedItem],
