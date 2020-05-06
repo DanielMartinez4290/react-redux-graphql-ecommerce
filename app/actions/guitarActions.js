@@ -2,6 +2,7 @@ import configuration from '../aws-exports';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { ListGuitars } from '../graphql';
 Amplify.configure({...configuration});
+import { VisibilityFilters } from './visibilityActions';
 
 /* Action Types */
 export const ALL      = 'ALL'; 
@@ -36,11 +37,11 @@ export function allCategory () {
 }
 
 export function gibsonCategory () {
-  return { type: GIBSON, payload: { products } }
+  return { type: VisibilityFilters.SHOW_GIBSON, payload: { products } }
 }
 
 export function fenderCategory () {
-  return { type: FENDER, payload: {products} }
+  return { type: VisibilityFilters.SHOW_FENDER, payload: {products} }
 }
 
 export function sortLow () {

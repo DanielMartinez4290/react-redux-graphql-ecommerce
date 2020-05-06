@@ -5,6 +5,11 @@ import SortHeader from "./SortHeader";
 import Product from "./Product"; 
 
 class FrontPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {products: this.props.products};
+  }
+
   componentDidMount() {
     this.props.allCategory;
   }
@@ -13,7 +18,7 @@ class FrontPage extends React.Component {
     return (
       <Fragment>
           <div className="frontPage">
-            <div className="tagLine">
+            <div className="tagLine" data-testid="app-title">
                 Music Store 
             </div>
             <div className="categories">

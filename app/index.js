@@ -21,10 +21,7 @@ const store = createStore(
 );
 
 epicMiddleware.run(rootEpic);
-
-setTimeout(() => {
-  store.dispatch(fetchProducts());
-}, 800);
+store.dispatch(fetchProducts());
 
 ReactDOM.render(
   <Provider store={store}>

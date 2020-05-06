@@ -1,10 +1,12 @@
 import {ALL, GIBSON, FENDER, SORTLOW, SORTHIGH, FETCH_CHARACTERS_FULFILLED} from '../actions/guitarActions';
 import { ADD_TO_CART, SHOW_CART_MODAL, HIDE_CART_MODAL } from '../actions/cartActions';
+import { VisibilityFilters } from '../actions/visibilityActions';
   
 const initState = {
     products: [],
     cart: [],
     showCart: false,
+    visibilityFilter: ALL,
     total: 0
 }
 
@@ -46,17 +48,17 @@ const productsReducer = (state =  initState, action) => {
       return action.payload.characters;
     }
   
-    if (action.type === GIBSON){
+    if (action.type === VisibilityFilters.SHOW_GIBSON){
       return {
-        ...state, 
-        products: action.payload.products.filter(guitar => guitar.category === 'Gibson')
+        ...state,
+        visibilityFilter: VisibilityFilters.SHOW_GIBSON, 
       };
     }
   
-    if (action.type === FENDER){
+    if (action.type === VisibilityFilters.SHOW_FENDER){
       return {
         ...state,
-        products: action.payload.products.filter(guitar => guitar.category === 'Fender')
+        visibilityFilter: VisibilityFilters.SHOW_FENDER, 
       };
     }
 

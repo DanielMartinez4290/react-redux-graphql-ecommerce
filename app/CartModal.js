@@ -15,7 +15,7 @@ class CartModal extends React.Component {
         <div className="cart">
           <button 
               type="button" 
-              class="close" 
+              className="close" 
               aria-label="Close" 
               onClick={this.props.hideCartModal}
           >

@@ -35,7 +35,7 @@ class PageHeader extends React.Component {
               <NavItem key={i} item={item} />
             ))}
             <li onClick={this.props.showCartModal}>
-              Cart <span class="glyphicon glyphicon-shopping-cart" />
+              Cart <span className="glyphicon glyphicon-shopping-cart" />
             </li>  
           </ul>
         </div>
