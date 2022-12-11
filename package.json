@@ -21,7 +21,7 @@
     "bootstrap": "^3.4.1",
     "connect-multiparty": "*",
     "cors": "^2.8.5",
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "fs-extra": "*",
     "lib": "^4.0.2",
     "mongoose": "^5.8.7",
